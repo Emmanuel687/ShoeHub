@@ -1,0 +1,44 @@
+.btn {
+    color: white;
+    background-color: rgb(3, 3, 255);
+    margin-: 40px;
+}
+.btn:hover{
+    background-color:  rgb(3, 3, 255);
+    transition-duration: 0.4s;
+
+    
+}
+.weather ul{
+    list-style: none;
+    color: rgb(97, 93, 93);
+    
+}
+
+h1{
+      color: rgb(97, 93, 93);
+      font-size: 35px;
+}
+h2{
+      color: rgb(97, 93, 93);
+      font-size: 30px;
+}
+h3{
+      color: rgb(97, 93, 93);
+       font-size: 25px;
+}
+.temperature h1{
+    color: black;
+    font-size: 40px;
+    top: 10px;
+
+}
+
+.degrees{
+    font-size: 15px;
+}
+.card{
+    margin-top: 10%;
+    margin-left: 30%;
+    padding: 20px;
+}
