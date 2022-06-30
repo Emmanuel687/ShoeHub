@@ -1,46 +1,43 @@
-let weather = {
-  paris: {
-    temp: 19.7,
-    humidity: 80,
-  },
-  tokyo: {
-    temp: 17.3,
-    humidity: 50,
-  },
-  lisbon: {
-    temp: 30.2,
-    humidity: 20,
-  },
-  "san francisco": {
-    temp: 20.9,
-    humidity: 100,
-  },
-  oslo: {
-    temp: -5,
-    humidity: 20,
-  },
-};
+// ⏰Feature #1
+// In your project, display the current date and time using JavaScript: Tuesday 16:00
 
-// Include the JavaScript file provided in your project, when loading your project,
-//  ask the user "Enter a city" (example: Paris), alert "It is currently 19°C (66°F) 
-// in Paris with a humidity of 80%"
+// 🕵️‍♀️Feature #2
+// Add a search engine, when searching for a city (i.e. Paris), display the city name on the page after the user submits the form.
 
-// If the city doesn't exist in the object (i.e: Sydney), alert "Sorry, we don't know 
-// the weather for this city, try going to https://www.google.com/search?q=weather+sydney". 
-// Since this is an alert, the link shouldn't be clickable.
+// 🙀Bonus Feature
+// Display a fake temperature (i.e 17) in Celsius and add a link to convert it to Fahrenheit. When clicking on it, it should convert the temperature to Fahrenheit. When clicking on Celsius, it should convert it back to Celsius.
+
+
+// now.getMinutes();                     // 0,1,2, 12
+// now.getHours();                      //1, 2, 3, 4
+// now.getDate();                       //1, 2, 3, 4
+// now.getDay();                        // 0, 1, 2
+// now.getMonth();                      // 0, 1, 2
+// now.getFullYear();                      // 2021
 
 
 
-// write your code here
-var cityName = prompt("Enter a City");
-cityName = cityName.toLowerCase();
 
-if (weather[cityName]!== undefined){
-  var temperature = weather[cityName].temp;
-  var humidity = weather[cityName].humidity;
+// var timeToday = new Date()
+// var currentDay = now.getDay()
+// var currentTime = now.getHours()
+// var currentMinute = now.getMinutes()
 
-  alert(`It is currently ${temperature} in ${cityName} with ${humidity}`);
-}else(alert(`Sorry, we don't know the weather for this city, try going to https://www.google.com/search?q=weather+${cityName}`));
+// function timeNow(){
+//   var dayWeeks = ["Monday","Tuesday","Wenesday","Thursday","Friday","Saturday","Sunday"]
+//   console.log(dayWeeks[currentDay])
+  
+// }
+
+// timeNow()
 
 
+var dateElement = document.querySelector("#date-element");
 
+var currentDay = new Date();
+var days = ["Sunday","Monday","Tuesday","Wenesday","Thursday","Friday","Saturday"]
+var day = currentDay.getDay();
+var hours = currentDay.getHours();
+var minutes= currentDay.getMinutes();
+
+dateElement.innerHTML = `${days[day]} ${hours}:${minutes}`
